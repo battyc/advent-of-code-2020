@@ -28,6 +28,3 @@ def find_answer_from_file_pt_two(file_name):
             fin = new_base - entry
             if fin > 0 and fin in num_list:
                 return n * fin * entry
-
-
-
