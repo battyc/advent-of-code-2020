@@ -1,5 +1,18 @@
 #!/usr/bin/python
 
+def get_trees_in_path(x_incr, y_incr, tree_list):
+    tree_count = 0
+    x = 0
+    y = 0
+    while y < len(tree_list):
+        tree_count += 1 if tree_list[y][x] == '#' else 0
+        x += x_incr
+        y += y_incr
+        # mod so that we loop around when we reach the end of a row
+        x = x % 31
+    return tree_count
+
+
 def main():
     f = open("input", "r")
     tree_list = f.read()
@@ -15,16 +28,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-def get_trees_in_path(x_incr, y_incr, tree_list):
-    tree_count = 0
-    x = 0
-    y = 0
-    while y < len(tree_list):
-        tree_count += 1 if tree_list[y][x] == '#' else 0
-        x += x_incr
-        y += y_incr
-        # mod so that we loop around when we reach the end of a row
-        x = x % 31
-    return tree_count

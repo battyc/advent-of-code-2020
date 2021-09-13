@@ -1,13 +1,5 @@
 #!/usr/bin/python
 
-def main():
-    print("Part One: " + str(find_answer_from_file_pt_one("input")))
-    print("Part Two: " + str(find_answer_from_file_pt_two("input")))
-
-
-if __name__ == "__main__":
-    main()
-
 
 def find_answer_from_file_pt_one(file_name):
     f = open(file_name, "r")
@@ -28,3 +20,12 @@ def find_answer_from_file_pt_two(file_name):
             fin = new_base - entry
             if fin > 0 and fin in num_list:
                 return n * fin * entry
+
+
+def main():
+    print("Part One: " + str(find_answer_from_file_pt_one("input")))
+    print("Part Two: " + str(find_answer_from_file_pt_two("input")))
+
+
+if __name__ == "__main__":
+    main()
