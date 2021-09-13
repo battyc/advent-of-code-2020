@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 def get_trees_in_path(x_incr, y_incr, tree_list):
     tree_count = 0
