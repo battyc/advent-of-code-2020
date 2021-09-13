@@ -13,6 +13,10 @@ def main():
     print("{}".format(a * b * c * d * e))
 
 
+if __name__ == "__main__":
+    main()
+
+
 def get_trees_in_path(x_incr, y_incr, tree_list):
     tree_count = 0
     x = 0
@@ -24,7 +28,3 @@ def get_trees_in_path(x_incr, y_incr, tree_list):
         # mod so that we loop around when we reach the end of a row
         x = x % 31
     return tree_count
-
-
-if __name__ == "__main__":
-    main()
